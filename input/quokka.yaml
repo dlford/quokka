@@ -77,18 +77,6 @@ pcbs:
           to: "{{name}}"
           reverse: true
           keycaps: true
-      jack:
-        what: trrs
-        where:
-          - ref: matrix_inner_home
-            shift: [39, -25]
-            rotate: -90
-        params:
-          reverse: true
-          A: pcbs.split.footprints.mcu.nets.P1
-          B: pcbs.split.footprints.mcu.nets.P2
-          C: pcbs.split.footprints.mcu.nets.P3
-          D: pcbs.split.footprints.mcu.nets.P4
       mcu:
         what: promicro_flip
         where:
@@ -113,3 +101,24 @@ pcbs:
           P6: matrix_inner_bottom
           P8: thumb_tucky
           P9: thumb_reachy
+      diode:
+        what: diode
+        where: true
+        params:
+          from: "{{colrow}}"
+          to: "{{row_net}}"
+        adjust:
+          shift: [-8, 0]
+          rotate: 90
+      trrs:
+        what: trrs
+        where:
+          - ref: matrix_inner_home
+            shift: [39, -25]
+            rotate: -90
+        params:
+          reverse: true
+          A: pcbs.split.footprints.mcu.P1
+          B: pcbs.split.footprints.mcu.P2
+          C: pcbs.split.footprints.mcu.P3
+          D: pcbs.split.footprints.mcu.P4
