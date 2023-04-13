@@ -81,7 +81,7 @@ pcbs:
         what: promicro_flip
         where:
           - ref: matrix_inner_home
-            shift: [1U, 17]
+            shift: [1U, 16.5]
             rotate: -90
         params:
           P7: matrix_pinky_top
@@ -110,6 +110,15 @@ pcbs:
         adjust:
           shift: [-8, 0]
           rotate: 90
+      reset_btn:
+        what: side_switch
+        where:
+          - ref: matrix_inner_home
+            shift: [28, 36]
+            rotate: 180
+        params:
+          from: pcbs.split-footprints.mcu.P1
+          to: pcbs.split-footprints.mcu.P2
       trrs:
         what: trrs
         where:
