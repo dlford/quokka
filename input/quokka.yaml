@@ -4,9 +4,10 @@ points:
   zones:
     matrix:
       columns:
-        pinky.key:
-          bind: [5, 30, 5, 5]
-          column_net: P9
+        pinky:
+          key:
+            bind: [5, 30, 5, 5]
+            column_net: P9
         ring.key:
           stagger: 0.85U
           column_net: P8
@@ -106,15 +107,6 @@ pcbs:
           - ref: matrix_inner_home
             shift: [1U, 16.5]
             rotate: -90
-      diode:
-        what: diode
-        where: true
-        params:
-          to: "{{column_net}}"
-          from: "{{name}}"
-        adjust:
-          shift: [-9, -5]
-          rotate: -90
       mx:
         what: mx
         where: true
@@ -123,6 +115,26 @@ pcbs:
           hotswap: true
           from: "{{row_net}}"
           to: "{{name}}"
+        # TODO: flip keys
+        # adjust:
+        #   rotate: 180
+      diode:
+        what: diode
+        where: true
+        params:
+          to: "{{column_net}}"
+          from: "{{name}}"
+        adjust:
+          shift: [-7.75, -4.25]
+          rotate: -90
+      led:
+        what: sk6812_mini_e
+        where: true
+        params:
+          din: P0
+          dout: P0
+        adjust:
+          shift: [0, -5.25]
       reset_btn:
         what: side_switch
         where:

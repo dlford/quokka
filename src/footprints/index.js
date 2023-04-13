@@ -13,6 +13,7 @@ module.exports = {
     promicro: require('./promicro'),
     promicro_flip: require('./promicro_flip'),
     rgb: require('./rgb'),
+    sk6812_mini_e: require('./sk6812_mini_e'),
     rotary: require('./rotary'),
     scrollwheel: require('./scrollwheel'),
     slider: require('./slider'),
