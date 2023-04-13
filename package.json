@@ -10,6 +10,8 @@
     "main": "./src/ergogen.js",
     "bin": "./src/cli.js",
     "scripts": {
+        "start": "nodemon --watch input/quokka.yaml --watch src src/cli.js input/quokka.yaml -o output",
+        "make": "node src/cli.js input/quokka.yaml -o output",
         "build": "rollup -c",
         "test": "mocha -r test/helpers/register test/index.js",
         "coverage": "nyc --reporter=html --reporter=text npm test"
@@ -31,6 +33,7 @@
         "dir-compare": "^4.0.0",
         "glob": "^8.1.0",
         "mocha": "^10.2.0",
+        "nodemon": "^2.0.22",
         "nyc": "^15.1.0",
         "rollup": "^3.10.1",
         "sinon": "^15.0.1"
