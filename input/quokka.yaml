@@ -1,53 +1,37 @@
 points:
   key:
     bind: 5
-    footprints:
-      - type: mx
-        params:
-          reverse: true
-          hotswap: true
-          from: "{{row_net}}"
-          to: "{{colrow}}"
-      - type: diode
-        anchor:
-          shift: [0, -4.7]
-          rotate: 180
-        params:
-          via_in_pad: true
-          through_hole: false
-          from: "{{colrow}}"
-          to: "{{row_net}}"
   zones:
     matrix:
       columns:
         pinky.key:
           bind: [5, 30, 5, 5]
-          col_net: P9
+          column_net: P9
         ring.key:
           stagger: 0.85U
-          col_net: P8
+          column_net: P8
         middle.key:
           stagger: 0.35U
           bind: [5, 5, 13.5, 5]
-          col_net: P7
+          column_net: P7
         index.key:
           stagger: -0.55U
           bind: [5, 5, 5, 10.75]
-          col_net: P6
+          column_net: P6
         inner.key:
           stagger: -0.15U
           bind: [5, 30, 12, 5]
-          col_net: P5
+          column_net: P5
       rows:
         bottom:
           padding: U
-          row_net: P10
+          row_net: P14
         home:
           padding: U
           row_net: P16
         top:
           padding: U
-          row_net: P14
+          row_net: P10
     thumb:
       anchor:
         ref: matrix_index_bottom
@@ -57,14 +41,14 @@ points:
           key:
             name: thumb_tucky
             bind: [5, 6, 5, 6]
-            col_net: P7
+            column_net: P7
         home:
           key:
             name: thumb_home
             spread: U
             splay: -15
             origin: [-0.5U, -0.65U]
-            col_net: P6
+            column_net: P6
         reachy:
           key:
             spread: U
@@ -72,7 +56,7 @@ points:
             origin: [-0.5U, -0.65U]
             name: thumb_reachy
             bind: [12, 5, 5, 5]
-            col_net: P5
+            column_net: P5
       rows:
         thumb:
           row_net: P15
@@ -126,18 +110,19 @@ pcbs:
         what: diode
         where: true
         params:
-          to: "{{row_net}}"
-          from: "{{colrow}}"
+          to: "{{column_net}}"
+          from: "{{name}}"
         adjust:
-          shift: [-8, 0]
+          shift: [-9, -5]
           rotate: -90
-      # mx: TODO: 
-      #   what: mx
-      #   params:
-      #     reverse: true
-      #     hotswap: true
-      #     from: "{{row_net}}"
-      #     to: "{{colrow}}"
+      mx:
+        what: mx
+        where: true
+        params:
+          reverse: true
+          hotswap: true
+          from: "{{row_net}}"
+          to: "{{name}}"
       reset_btn:
         what: side_switch
         where:
@@ -145,7 +130,6 @@ pcbs:
             shift: [28, 36]
             rotate: 180
         params:
-          # TODO: reverse symmetric
           from: GND
           to: RST
           GND: GND
