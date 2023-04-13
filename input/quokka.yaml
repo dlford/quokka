@@ -1,41 +1,81 @@
 points:
   key:
     bind: 5
-  # footprints: TODO: hotswap
+    footprints:
+      - type: mx
+        params:
+          reverse: true
+          hotswap: true
+          from: "{{row_net}}"
+          to: "{{colrow}}"
+      - type: diode
+        anchor:
+          shift: [0, -4.7]
+          rotate: 180
+        params:
+          via_in_pad: true
+          through_hole: false
+          from: "{{colrow}}"
+          to: "{{row_net}}"
   zones:
     matrix:
       columns:
-        pinky.key.bind: [5, 30, 5, 5]
-        ring.key.stagger: 0.85U
-        middle.key.stagger: 0.35U
-        middle.key.bind: [5, 5, 13.5, 5]
-        index.key.stagger: -0.55U
-        index.key.bind: [5, 5, 5, 10.75]
-        inner.key.stagger: -0.15U
-        inner.key.bind: [5, 30, 12, 5]
+        pinky.key:
+          bind: [5, 30, 5, 5]
+          col_net: P9
+        ring.key:
+          stagger: 0.85U
+          col_net: P8
+        middle.key:
+          stagger: 0.35U
+          bind: [5, 5, 13.5, 5]
+          col_net: P7
+        index.key:
+          stagger: -0.55U
+          bind: [5, 5, 5, 10.75]
+          col_net: P6
+        inner.key:
+          stagger: -0.15U
+          bind: [5, 30, 12, 5]
+          col_net: P5
       rows:
-        bottom.padding: U
-        home.padding: U
-        top.padding: U
+        bottom:
+          padding: U
+          row_net: P10
+        home:
+          padding: U
+          row_net: P16
+        top:
+          padding: U
+          row_net: P14
     thumb:
       anchor:
         ref: matrix_index_bottom
         shift: [-0.5U, -1.125U]
       columns:
         tucky:
-          key.name: thumb_tucky
-          key.bind: [5, 6, 5, 6]
+          key:
+            name: thumb_tucky
+            bind: [5, 6, 5, 6]
+            col_net: P7
         home:
-          key.name: thumb_home
-          key.spread: U
-          key.splay: -15
-          key.origin: [-0.5U, -0.65U]
+          key:
+            name: thumb_home
+            spread: U
+            splay: -15
+            origin: [-0.5U, -0.65U]
+            col_net: P6
         reachy:
-          key.spread: U
-          key.splay: -15
-          key.origin: [-0.5U, -0.65U]
-          key.name: thumb_reachy
-          key.bind: [12, 5, 5, 5]
+          key:
+            spread: U
+            splay: -15
+            origin: [-0.5U, -0.65U]
+            name: thumb_reachy
+            bind: [12, 5, 5, 5]
+            col_net: P5
+      rows:
+        thumb:
+          row_net: P15
 
 outlines:
   _raw:
@@ -43,7 +83,7 @@ outlines:
       where: true
       bound: true
       asym: left
-      size: [18,17]
+      size: [18, 17]
       corner: 1
   _fillet:
     - what: outline
@@ -60,8 +100,7 @@ outlines:
       where:
         ref: matrix_inner_top
         shift: [23, -0.25]
-  switch_plate:
-    [ _fillet, -_switch_cutouts, -_oled_hole]
+  switch_plate: [_fillet, -_switch_cutouts, -_oled_hole]
 
 pcbs:
   split:
@@ -73,7 +112,7 @@ pcbs:
         what: mx
         where: true
         params:
-          from: GND
+          from: "{{row_net}}"
           to: "{{name}}"
           reverse: true
           keycaps: true
@@ -83,33 +122,22 @@ pcbs:
           - ref: matrix_inner_home
             shift: [1U, 16.5]
             rotate: -90
-        params:
-          P7: matrix_pinky_top
-          P18: matrix_ring_top
-          P19: matrix_middle_top
-          P20: matrix_index_top
-          P21: matrix_inner_top
-          P15: matrix_pinky_home
-          P14: matrix_ring_home
-          P16: matrix_middle_home
-          P10: matrix_index_home
-          P1: matrix_inner_home
-          P2: matrix_pinky_bottom
-          P3: matrix_ring_bottom
-          P4: matrix_middle_bottom
-          P5: matrix_index_bottom
-          P6: matrix_inner_bottom
-          P8: thumb_tucky
-          P9: thumb_reachy
       diode:
         what: diode
         where: true
         params:
-          from: "{{colrow}}"
           to: "{{row_net}}"
+          from: "{{colrow}}"
         adjust:
           shift: [-8, 0]
-          rotate: 90
+          rotate: -90
+      # mx: TODO: 
+      #   what: mx
+      #   params:
+      #     reverse: true
+      #     hotswap: true
+      #     from: "{{row_net}}"
+      #     to: "{{colrow}}"
       reset_btn:
         what: side_switch
         where:
@@ -117,8 +145,10 @@ pcbs:
             shift: [28, 36]
             rotate: 180
         params:
-          from: pcbs.split-footprints.mcu.P1
-          to: pcbs.split-footprints.mcu.P2
+          # TODO: reverse symmetric
+          from: GND
+          to: RST
+          GND: GND
       trrs:
         what: trrs
         where:
@@ -127,7 +157,8 @@ pcbs:
             rotate: -90
         params:
           reverse: true
-          A: pcbs.split.footprints.mcu.P1
-          B: pcbs.split.footprints.mcu.P2
-          C: pcbs.split.footprints.mcu.P3
-          D: pcbs.split.footprints.mcu.P4
+          symmetric: true
+          A: GND
+          B: GND
+          C: P0
+          D: VCC

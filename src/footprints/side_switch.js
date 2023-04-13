@@ -2,7 +2,8 @@ module.exports = {
     params: {
         designator: 'S',
         from: {type: 'net', value: 'from'},
-        to: {type: 'net', value: 'to'}
+        to: {type: 'net', value: 'to'},
+        GND: {type: 'net', value: 'GND'},
     },
     body: p => `
 
@@ -16,10 +17,8 @@ module.exports = {
         ${''/* THT terminals */}
         (pad 1 thru_hole circle (at -7.528 -5.12) (size 1.524 1.524) (drill 1) (layers *.Cu *.Mask) ${p.from.str})
         (pad 2 thru_hole circle (at -3.028 -5.12) (size 1.524 1.524) (drill 1) (layers *.Cu *.Mask) ${p.to.str})
-
-        ${''/* anchors */}
-        (pad 3 thru_hole circle (at -8.778 -7.62) (size 2 2) (drill 1.3) (layers *.Cu *.Mask))
-        (pad 4 thru_hole circle (at -1.778 -7.62) (size 2 2) (drill 1.3) (layers *.Cu *.Mask))
+        (pad 3 thru_hole circle (at -8.778 -7.62) (size 2 2) (drill 1.3) (layers *.Cu *.Mask) ${p.GND.str})
+        (pad 4 thru_hole circle (at -1.778 -7.62) (size 2 2) (drill 1.3) (layers *.Cu *.Mask) ${p.GND.str})
     )
 
     `
