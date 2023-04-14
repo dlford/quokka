@@ -7,22 +7,22 @@ points:
         pinky:
           key:
             bind: [5, 30, 5, 5]
-            column_net: P9
+            column_net: P8
         ring.key:
           stagger: 0.85U
-          column_net: P8
+          column_net: P7
         middle.key:
           stagger: 0.35U
           bind: [5, 5, 13.5, 5]
-          column_net: P7
+          column_net: P6
         index.key:
           stagger: -0.55U
           bind: [5, 5, 5, 10.75]
-          column_net: P6
+          column_net: P5
         inner.key:
           stagger: -0.15U
           bind: [5, 30, 12, 5]
-          column_net: P5
+          column_net: P4
       rows:
         bottom:
           padding: U
@@ -42,14 +42,14 @@ points:
           key:
             name: thumb_tucky
             bind: [5, 6, 5, 6]
-            column_net: P7
+            column_net: P6
         home:
           key:
             name: thumb_home
             spread: U
             splay: -15
             origin: [-0.5U, -0.65U]
-            column_net: P6
+            column_net: P5
         reachy:
           key:
             spread: U
@@ -57,7 +57,7 @@ points:
             origin: [-0.5U, -0.65U]
             name: thumb_reachy
             bind: [12, 5, 5, 5]
-            column_net: P5
+            column_net: P4
       rows:
         thumb:
           row_net: P15
@@ -158,3 +158,12 @@ pcbs:
           B: GND
           C: P0
           D: VCC
+      piezo:
+          what: piezo
+          where:
+            - ref: matrix_inner_home
+              shift: [14, -23]
+              rotate: 90
+          params:
+            A: GND
+            B: P9

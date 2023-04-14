@@ -20,4 +20,5 @@ module.exports = {
     trrs: require('./trrs'),
     via: require('./via'),
     side_switch: require('./side_switch'),
+    piezo: require('./piezo'),
 }
