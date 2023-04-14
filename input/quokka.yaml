@@ -93,14 +93,6 @@ pcbs:
       pcb:
         outline: _raw
     footprints:
-      keys:
-        what: mx
-        where: true
-        params:
-          from: "{{row_net}}"
-          to: "{{name}}"
-          reverse: true
-          keycaps: true
       mcu:
         what: promicro_flip
         where:
@@ -115,9 +107,8 @@ pcbs:
           hotswap: true
           from: "{{row_net}}"
           to: "{{name}}"
-        # TODO: flip keys
-        # adjust:
-        #   rotate: 180
+        adjust:
+          rotate: 180
       diode:
         what: diode
         where: true
@@ -126,7 +117,7 @@ pcbs:
           from: "{{name}}"
           smd_only: true
         adjust:
-          shift: [-7.75, -2.25]
+          shift: [-7.75, 2.25]
           rotate: -90
       diode_via_col:
         what: via
@@ -134,14 +125,14 @@ pcbs:
         params:
           net: "{{column_net}}"
         adjust:
-          shift: [-7.25, -1.75]
+          shift: [-7.25, 1.75]
       diode_via_key:
         what: via
         where: true
         params:
           net: "{{name}}"
         adjust:
-          shift: [-8.25, -2.75]
+          shift: [-8.25, 2.75]
       led:
         what: sk6812_mini_e
         where: true
@@ -149,49 +140,49 @@ pcbs:
           din: P0
           dout: P0
         adjust:
-          shift: [0, -5.25]
+          shift: [0, 5.25]
       led_via_gnd:
         what: via
         where: true
         params:
           net: GND
         adjust:
-          shift: [0, -3]
+          shift: [0, 3]
       led_via_vcc:
         what: via
         where: true
         params:
           net: VCC
         adjust:
-          shift: [0, -7.5]
+          shift: [0, 7.5]
       led_via_din_left:
         what: via
         where: true
         params:
           net: P0
         adjust:
-          shift: [-4, -3]
+          shift: [-4, 3]
       led_via_din_right:
         what: via
         where: true
         params:
           net: P0
         adjust:
-          shift: [4, -3]
+          shift: [4, 3]
       led_via_dout_left:
         what: via
         where: true
         params:
           net: P0
         adjust:
-          shift: [-4, -7.5]
+          shift: [-4, 7.5]
       led_via_dout_right:
         what: via
         where: true
         params:
           net: P0
         adjust:
-          shift: [4, -7.5]
+          shift: [4, 7.5]
       reset_btn:
         what: side_switch
         where:
