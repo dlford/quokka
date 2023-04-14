@@ -1,3 +1,4 @@
+# TODO: Define rgb din/dout paths as tags on each key?
 points:
   key:
     bind: 5
@@ -124,29 +125,14 @@ pcbs:
         adjust:
           shift: [-8.25, -5]
       diode:
-        what: diode
+        what: d_0805
         where: true
         params:
           to: "{{column_net}}"
           from: "{{name}}"
-          smd_only: true
         adjust:
-          shift: [-7.75, 2.25]
+          shift: [-7.5, 2]
           rotate: -90
-      diode_via_col:
-        what: via
-        where: true
-        params:
-          net: "{{column_net}}"
-        adjust:
-          shift: [-7.25, 1.75]
-      diode_via_key:
-        what: via
-        where: true
-        params:
-          net: "{{name}}"
-        adjust:
-          shift: [-8.25, 2.75]
       led:
         what: sk6812_mini_e
         where: true

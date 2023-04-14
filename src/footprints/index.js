@@ -22,4 +22,5 @@ module.exports = {
     side_switch: require('./side_switch'),
     piezo: require('./piezo'),
     oled_128x64: require('./oled_128x64'),
+    d_0805: require('./d_0805'),
 }
