@@ -135,6 +135,20 @@ pcbs:
           dout: P0
         adjust:
           shift: [0, -5.25]
+      led_gnd_via:
+        what: via
+        where: true
+        params:
+          net: GND
+        adjust:
+          shift: [0, -3]
+      led_vcc_via:
+        what: via
+        where: true
+        params:
+          net: VCC
+        adjust:
+          shift: [0, -7.5]
       reset_btn:
         what: side_switch
         where:
@@ -167,6 +181,20 @@ pcbs:
           params:
             A: GND
             B: P9
+      piezo_via_gnd:
+        what: via
+        where:
+          - ref: matrix_inner_home
+            shift: [13, -17.5]
+        params:
+          net: GND
+      piezo_via_p9:
+        what: via
+        where:
+          - ref: matrix_inner_home
+            shift: [24, -17.5]
+        params:
+          net: P9
       oled:
         what: oled_128x64
         where:
