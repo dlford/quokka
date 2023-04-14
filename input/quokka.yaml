@@ -124,9 +124,24 @@ pcbs:
         params:
           to: "{{column_net}}"
           from: "{{name}}"
+          smd_only: true
         adjust:
-          shift: [-7.75, -4.25]
+          shift: [-7.75, -2.25]
           rotate: -90
+      diode_via_col:
+        what: via
+        where: true
+        params:
+          net: "{{column_net}}"
+        adjust:
+          shift: [-7.25, -1.75]
+      diode_via_key:
+        what: via
+        where: true
+        params:
+          net: "{{name}}"
+        adjust:
+          shift: [-8.25, -2.75]
       led:
         what: sk6812_mini_e
         where: true
@@ -135,14 +150,14 @@ pcbs:
           dout: P0
         adjust:
           shift: [0, -5.25]
-      led_gnd_via:
+      led_via_gnd:
         what: via
         where: true
         params:
           net: GND
         adjust:
           shift: [0, -3]
-      led_vcc_via:
+      led_via_vcc:
         what: via
         where: true
         params:
