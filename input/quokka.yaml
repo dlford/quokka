@@ -167,3 +167,12 @@ pcbs:
           params:
             A: GND
             B: P9
+      oled:
+        what: oled_128x64
+        where:
+          - ref: matrix_inner_home
+            shift: [36.5, -4]
+            rotate: 180
+        params:
+          SCL: P3
+          SDA: P2

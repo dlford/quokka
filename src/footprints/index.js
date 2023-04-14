@@ -21,4 +21,5 @@ module.exports = {
     via: require('./via'),
     side_switch: require('./side_switch'),
     piezo: require('./piezo'),
+    oled_128x64: require('./oled_128x64'),
 }
