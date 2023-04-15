@@ -1,4 +1,5 @@
-# TODO: Define rgb din/dout paths as tags on each key?
+# TODO: Make oled reversable with pads
+
 points:
   key:
     bind: 5
@@ -121,8 +122,8 @@ pcbs:
         what: sk6812_mini_e
         where: true
         params:
-          din: P2
-          dout: P2
+          din: P21
+          dout: P21
         adjust:
           shift: [0, 5.25]
       reset_btn:
