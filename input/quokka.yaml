@@ -1,3 +1,5 @@
+# TODO: Case Parts, thin out port areas
+
 points:
   key:
     bind: 5
@@ -63,16 +65,27 @@ points:
           row_net: P15
 
 outlines:
-  _raw:
+  _pcb_raw:
     - what: rectangle
       where: true
       bound: true
       asym: left
       size: [18, 17]
       corner: 1
-  _fillet:
+  _case_raw:
+    - what: rectangle
+      where: true
+      bound: true
+      asym: left
+      size: [26, 25]
+      corner: 1
+  _plate_fillet:
     - what: outline
-      name: _raw
+      name: _pcb_raw
+      fillet: 1.25
+  _case_fillet:
+    - what: outline
+      name: _case_raw
       fillet: 1.25
   _switch_cutouts:
     - what: rectangle
@@ -81,17 +94,74 @@ outlines:
       bound: false
   _oled_hole:
     - what: rectangle
-      size: [22, 11]
+      size: [23.3, 12.3]
       where:
         ref: matrix_inner_top
-        shift: [23, -0.25]
-  switch_plate: [_fillet, -_switch_cutouts, -_oled_hole]
+        shift: [24.18, -11]
+  _screw_holes:
+    top_left:
+      what: circle
+      radius: 1.05
+      where:
+        ref: matrix_ring_home
+        shift: [-9.25, 9.5]
+    bottom_left:
+      what: circle
+      radius: 1.05
+      where:
+        ref: matrix_pinky_bottom
+        shift: [9.5, 3]
+    top_right:
+      what: circle
+      radius: 1.05
+      where:
+        ref: matrix_inner_top
+        shift: [-9.6, -6.75]
+    palm:
+      what: circle
+      radius: 1.05
+      where:
+        ref: matrix_index_bottom
+        shift: [1.5, -22]
+    thumb:
+      what: circle
+      radius: 1.05
+      where:
+        ref: thumb_reachy
+        shift: [-11.325, 0]
+  _case_screw_holes:
+    $extends: outlines._screw_holes
+    top_left:
+      radius: 1.35
+    bottom_left:
+      radius: 1.35
+    top_right:
+      radius: 1.35
+    palm:
+      radius: 1.35
+    thumb:
+      radius: 1.35
+  case_screw_hole_countersinks:
+    $extends: outlines._screw_holes
+    top_left:
+      radius: 2.35
+    bottom_left:
+      radius: 2.35
+    top_right:
+      radius: 2.35
+    palm:
+      radius: 2.35
+    thumb:
+      radius: 2.35
+  switch_plate: [_plate_fillet, -_switch_cutouts, -_oled_hole, -_case_screw_holes]
+  case_base: [_case_fillet, -_case_screw_holes]
+  _pcb_outline: [_pcb_raw, -_screw_holes]
 
 pcbs:
   split:
     outlines:
       pcb:
-        outline: _raw
+        outline: _pcb_outline
     footprints:
       mcu:
         what: promicro_flip
