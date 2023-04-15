@@ -86,18 +86,22 @@ outlines:
         - ref: matrix_inner_bottom
           shift: [35, -20.5]
         - ref: matrix_inner_bottom
-          shift: [39, -20]
+          shift: [39, -20.5]
         - ref: matrix_inner_top
           shift: [39, 13.5]
-  _oled_screw_holes:
-    bottom_right:
-      what: circle
-      radius: 1.05
-      where:
-        ref: matrix_inner_bottom
-        shift: [34, -15.5]
-        # TODO: other screw hole
-  oled_cover: [_oled_cover_plate, -_oled_screw_holes]
+  _plate_oled_cover_cutout:
+    - what: polygon
+      points:
+        - ref: matrix_inner_top
+          shift: [11.5, 13.5]
+        - ref: matrix_inner_bottom
+          shift: [11.5, -10.5]
+        - ref: matrix_inner_bottom
+          shift: [34.5, -21]
+        - ref: matrix_inner_bottom
+          shift: [41, -35]
+        - ref: matrix_inner_top
+          shift: [39, 13.5]
   _switch_cutouts:
     - what: rectangle
       where: true
@@ -106,49 +110,51 @@ outlines:
   _screw_holes:
     top_left:
       what: circle
-      radius: 1.05
+      radius: 1.125
       where:
         ref: matrix_ring_home
         shift: [-9.25, 9.5]
     bottom_left:
       what: circle
-      radius: 1.05
+      radius: 1.125
       where:
         ref: matrix_pinky_bottom
         shift: [9.5, 3]
     top_right:
       what: circle
-      radius: 1.05
+      radius: 1.125
       where:
         ref: matrix_inner_top
         shift: [-9.6, -6.75]
     palm:
       what: circle
-      radius: 1.05
+      radius: 1.125
       where:
         ref: matrix_index_bottom
         shift: [1.5, -22]
     thumb:
       what: circle
-      radius: 1.05
+      radius: 1.125
       where:
         ref: thumb_reachy
         shift: [-11.325, 0]
-  #_case_screw_holes:
-  #  $extends: outlines._screw_holes
-  #  top_left:
-  #    radius: 1.35
-  #  bottom_left:
-  #    radius: 1.35
-  #  top_right:
-  #    radius: 1.35
-  #  palm:
-  #    radius: 1.35
-  #  thumb:
-  #    radius: 1.35
-  #_pcb_outline: [_pcb_raw, -_screw_holes]
-  _pcb_outline: [_pcb_raw, -_screw_holes]
-  switch_plate: [_plate_fillet, -_switch_cutouts, -_screw_holes]
+  _oled_screw_holes:
+    bottom_left:
+      what: circle
+      radius: 1.125
+      where:
+        ref: matrix_inner_bottom
+        shift: [18, -6]
+    bottom_right:
+      what: circle
+      radius: 1.125
+      where:
+        ref: matrix_inner_bottom
+        shift: [32, -12.5]
+  _pcb_outline: [_pcb_raw]
+  switch_plate: [_plate_fillet, -_plate_oled_cover_cutout, -_switch_cutouts, -_screw_holes]
+  oled_cover: [_oled_cover_plate, -_oled_screw_holes]
+  bottom_plate: [_plate_fillet, -_screw_holes]
 
 pcbs:
   split:
@@ -156,6 +162,41 @@ pcbs:
       pcb:
         outline: _pcb_outline
     footprints:
+      top_left_hole:
+        what: screw_hole_m2
+        where:
+          ref: matrix_ring_home
+          shift: [-9.25, 9.5]
+      bottom_left_hole:
+        what: screw_hole_m2
+        where:
+          ref: matrix_pinky_bottom
+          shift: [9.5, 3]
+      top_right_hole:
+        what: screw_hole_m2
+        where:
+          ref: matrix_inner_top
+          shift: [-9.6, -6.75]
+      palm_hole:
+        what: screw_hole_m2
+        where:
+          ref: matrix_index_bottom
+          shift: [1.5, -22]
+      thumb_hole:
+        what: screw_hole_m2
+        where:
+          ref: thumb_reachy
+          shift: [-11.325, 0]
+      bottom_left_oled_cover_hole:
+        what: screw_hole_m2
+        where:
+          ref: matrix_inner_bottom
+          shift: [18, -6]
+      bottom_right_oled_cover_hole:
+        what: screw_hole_m2
+        where:
+          ref: matrix_inner_bottom
+          shift: [32, -12.5]
       mcu:
         what: promicro_flip
         where:
