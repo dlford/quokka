@@ -251,8 +251,8 @@ pcbs:
       piezo:
           what: piezo
           where:
-            - ref: matrix_inner_home
-              shift: [18.5, -12]
+            - ref: matrix_middle_bottom
+              shift: [-6, -10]
           params:
             A: GND
             B: P9
