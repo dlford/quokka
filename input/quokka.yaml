@@ -188,24 +188,21 @@ pcbs:
         adjust:
           shift: [0, 5.25]
       reset_btn:
-        what: side_switch
+        what: reset_button
         where:
           - ref: matrix_inner_home
-            shift: [28, 36]
-            rotate: 180
+            shift: [36.5, -33.75]
+            rotate: 90
         params:
           from: GND
           to: RST
-          GND: GND
       trrs:
         what: trrs
         where:
           - ref: matrix_inner_home
-            shift: [39, -25]
-            rotate: -90
+            shift: [34.75, 32.5]
         params:
           reverse: true
-          symmetric: true
           A: GND
           B: GND
           C: P0
@@ -214,8 +211,7 @@ pcbs:
           what: piezo
           where:
             - ref: matrix_inner_home
-              shift: [13, -30]
-              rotate: 90
+              shift: [18.5, -12]
           params:
             A: GND
             B: P9

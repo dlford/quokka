@@ -20,10 +20,6 @@ module.exports = {
 
       ${'' /* footprint */}
       (attr through_hole)
-      (fp_text value "GME12864-49" (at -0.6 -13.9 unlocked) (layer "F.Fab")
-          (effects (font (size 1 1) (thickness 0.15)))
-        (tstamp 2b7d300a-7512-427e-8a79-17a1f29f9ce4)
-      )
       (fp_rect (start 0 0) (end 24.7 27)
         (stroke (width 0.1) (type default)) (fill none) (layer "F.SilkS") (tstamp e95fafcf-9e7a-48a3-b105-f26e0ba3f32b))
       (fp_rect (start 0.98 6.08) (end 23.72 17.94)

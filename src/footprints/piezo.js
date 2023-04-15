@@ -15,18 +15,6 @@ module.exports = {
 
     ${'' /* footprint */}
     (attr smd)
-      (fp_text reference "REF**" (at 6 3 unlocked) (layer "F.SilkS") hide
-          (effects (font (size 1 1) (thickness 0.1)))
-        (tstamp b23563ec-d1a0-4353-854e-8da058f80e10)
-      )
-      (fp_text value "KLJ-1102" (at 5.585364 4.5267 unlocked) (layer "F.Fab")
-          (effects (font (size 1 1) (thickness 0.15)))
-        (tstamp 063812fc-b133-4bdd-9629-fb66bb5108ed)
-      )
-      (fp_text user "KLJ-1102" (at 5.414636 4.5267 unlocked) (layer "B.Fab")
-          (effects (font (size 1 1) (thickness 0.15)) (justify mirror))
-        (tstamp 037e5423-599c-420c-93a9-a934906d15d5)
-      )
       (fp_rect (start 11 0) (end 0 9)
         (stroke (width 0.1) (type default)) (fill none) (layer "B.SilkS") (tstamp 01c2fabf-b739-44a2-b13f-b473c1618c70))
       (fp_rect (start 0 0) (end 11 9)

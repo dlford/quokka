@@ -19,7 +19,7 @@ module.exports = {
     slider: require('./slider'),
     trrs: require('./trrs'),
     via: require('./via'),
-    side_switch: require('./side_switch'),
+    reset_button: require('./reset_button'),
     piezo: require('./piezo'),
     oled_128x64: require('./oled_128x64'),
     d_0805: require('./d_0805'),
