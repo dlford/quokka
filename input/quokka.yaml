@@ -1,5 +1,3 @@
-# TODO: Switch plate cutout, cutout mount holes
-
 points:
   key:
     bind: 5
@@ -197,6 +195,16 @@ pcbs:
         where:
           ref: matrix_inner_bottom
           shift: [32, -12.5]
+      bottom_left_oled_mount_hole:
+        what: screw_hole_m2
+        where:
+          ref: matrix_inner_bottom
+          shift: [13.9, 17.05]
+      bottom_right_oled_mount_hole:
+        what: screw_hole_m2
+        where:
+          ref: matrix_inner_bottom
+          shift: [34.395, 17.05]
       mcu:
         what: promicro_flip
         where:
