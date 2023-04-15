@@ -101,29 +101,13 @@ pcbs:
             shift: [1U, 16.5]
             rotate: -90
       mx:
-        what: mx
+        what: mx_hotswap
         where: true
         params:
-          reverse: true
-          hotswap: true
           from: "{{row_net}}"
           to: "{{name}}"
         adjust:
           rotate: 180
-      mx_via_row:
-        what: via
-        where: true
-        params:
-          net: "{{row_net}}"
-        adjust:
-          shift: [8.25, -5]
-      mx_via_col:
-        what: via
-        where: true
-        params:
-          net: "{{name}}"
-        adjust:
-          shift: [-8.25, -5]
       diode:
         what: d_0805
         where: true

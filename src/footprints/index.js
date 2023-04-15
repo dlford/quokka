@@ -23,4 +23,5 @@ module.exports = {
     piezo: require('./piezo'),
     oled_128x64: require('./oled_128x64'),
     d_0805: require('./d_0805'),
+    mx_hotswap: require('./mx_hotswap'),
 }
