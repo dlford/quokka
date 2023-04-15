@@ -10,8 +10,8 @@
     "main": "./src/ergogen.js",
     "bin": "./src/cli.js",
     "scripts": {
-        "start": "nodemon --watch input/quokka.yaml --watch src src/cli.js input/quokka.yaml -o output",
-        "make": "node src/cli.js input/quokka.yaml -o output",
+        "start": "nodemon --watch quokka.yaml --watch src src/cli.js quokka.yaml -o output",
+        "make": "node src/cli.js quokka.yaml -o output",
         "build": "rollup -c",
         "test": "mocha -r test/helpers/register test/index.js",
         "coverage": "nyc --reporter=html --reporter=text npm test"
