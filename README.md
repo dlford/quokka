@@ -2,6 +2,10 @@
 
 *This keyboard is a work in progress and untested, please check back soon!*
 
+*Test PCBs are in production as of 4/16/23*
+
+![Render of PCB](render.svg)
+
 ## Features
 
 - Designed for smaller handed folks
