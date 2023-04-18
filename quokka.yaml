@@ -164,15 +164,15 @@ outlines:
   _screw_holes_counter_sunk:
     $extends: outlines._screw_holes
     top_left:
-      radius: 1.875
+      radius: 1.975
     bottom_left:
-      radius: 1.875
+      radius: 1.975
     top_right:
-      radius: 1.875
+      radius: 1.975
     palm:
-      radius: 1.875
+      radius: 1.975
     thumb:
-      radius: 1.875
+      radius: 1.975
   _3d_case_holes_heat_set:
     $extends: outlines._screw_holes
     top_left:
