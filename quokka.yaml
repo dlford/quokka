@@ -173,6 +173,18 @@ outlines:
       radius: 1.875
     thumb:
       radius: 1.875
+  _3d_case_pcb_risers_outer:
+    $extends: outlines._screw_holes
+    top_left:
+      radius: 2.5
+    bottom_left:
+      radius: 2.5
+    top_right:
+      radius: 2.5
+    palm:
+      radius: 2.5
+    thumb:
+      radius: 2.5
   3d_case_keycaps:
     - what: rectangle
       where: true
@@ -197,15 +209,20 @@ outlines:
       where:
         - ref: matrix_inner_home
           shift: [36.5, -33.75]
+  3d_case_switch_cutouts:
+    - what: rectangle
+      where: true
+      size: 14.3
+      bound: false
   switch_plate: [_plate_fillet, -_plate_oled_cover_cutout, -_switch_cutouts, -_screw_holes]
   oled_cover: [_oled_cover_plate, -_oled_screw_holes]
   bottom_plate: [_plate_fillet, -_screw_holes]
   3d_case_base_upper: [_3d_case_base, -_screw_holes]
   3d_case_base_lower: [_3d_case_base, -_screw_holes_counter_sunk]
   3d_case_wall: [_3d_case_base, -_3d_case_wall_inner]
-  3d_case_plate_upper: [_plate_fillet, -_plate_oled_cover_cutout, -_switch_cutouts, -_screw_holes_counter_sunk]
-  3d_case_plate_lower: [_plate_fillet, -_plate_oled_cover_cutout, -_switch_cutouts, -_screw_holes]
-  3d_case_switches: [_switch_cutouts]
+  3d_case_plate_upper: [_plate_fillet, -_plate_oled_cover_cutout, -3d_case_switch_cutouts, -_screw_holes_counter_sunk]
+  3d_case_plate_lower: [_plate_fillet, -_plate_oled_cover_cutout, -3d_case_switch_cutouts, -_screw_holes]
+  3d_case_pcb_risers: [_3d_case_pcb_risers_outer, -_screw_holes]
 
 pcbs:
   split:
