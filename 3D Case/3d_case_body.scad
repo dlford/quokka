@@ -5,6 +5,7 @@ $fs=0.1;
 To Do:
 - Port voids
 - Double check screw hole tolerances
+- Double check wall height
 */
 
 wall_height = 20.6;
