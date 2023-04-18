@@ -1,5 +1,5 @@
 $fa=1;
-$fs=0.4;
+$fs=0.1;
 
 wall_height = 20.6;
 pcb_thickness = 1.6;
