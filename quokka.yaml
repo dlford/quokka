@@ -70,10 +70,6 @@ outlines:
       asym: left
       size: [18, 17]
       corner: 1
-  _plate_fillet:
-    - what: outline
-      name: _pcb_raw
-      fillet: 1.25
   _oled_cover_plate:
     - what: polygon
       points:
@@ -100,6 +96,11 @@ outlines:
           shift: [41, -35]
         - ref: matrix_inner_top
           shift: [39, 13.5]
+  _plate_with_oled_cutout: [_pcb_raw, -_plate_oled_cover_cutout]
+  _plate_fillet:
+    - what: outline
+      name: _plate_with_oled_cutout
+      fillet: 1.25
   _switch_cutouts:
     - what: rectangle
       where: true
@@ -150,9 +151,61 @@ outlines:
         ref: matrix_inner_bottom
         shift: [32, -12.5]
   _pcb_outline: [_pcb_raw]
+  _3d_case_base:
+    - what: outline
+      name: _pcb_raw
+      expand: 4
+      fillet: 1.25
+  _3d_case_wall_inner:
+    - what: outline
+      name: _pcb_raw
+      expand: 1
+      fillet: 1.25
+  _screw_holes_counter_sunk:
+    $extends: outlines._screw_holes
+    top_left:
+      radius: 1.875
+    bottom_left:
+      radius: 1.875
+    top_right:
+      radius: 1.875
+    palm:
+      radius: 1.875
+    thumb:
+      radius: 1.875
+  3d_case_keycaps:
+    - what: rectangle
+      where: true
+      size: 18.3
+      bound: false
+  3d_case_port_promicro:
+    - what: rectangle
+      size: [33, 17.8]
+      where:
+        - ref: matrix_inner_home
+          shift: [1U, 16.5]
+          rotate: -90
+  3d_case_port_trrs:
+    - what: rectangle
+      size: [8.65, 12.1]
+      where:
+        - ref: matrix_inner_home
+          shift: [34.75, 32.5]
+  3d_case_port_reset_switch:
+    - what: rectangle
+      size: [3.5, 6]
+      where:
+        - ref: matrix_inner_home
+          shift: [36.5, -33.75]
   switch_plate: [_plate_fillet, -_plate_oled_cover_cutout, -_switch_cutouts, -_screw_holes]
   oled_cover: [_oled_cover_plate, -_oled_screw_holes]
   bottom_plate: [_plate_fillet, -_screw_holes]
+  3d_case_base_upper: [_3d_case_base, -_screw_holes]
+  3d_case_base_lower: [_3d_case_base, -_screw_holes_counter_sunk]
+  3d_case_wall: [_3d_case_base, -_3d_case_wall_inner]
+  3d_case_plate_upper: [_plate_fillet, -_plate_oled_cover_cutout, -_switch_cutouts, -_screw_holes_counter_sunk]
+  3d_case_plate_lower: [_plate_fillet, -_plate_oled_cover_cutout, -_switch_cutouts, -_screw_holes]
+  3d_case_switches: [_switch_cutouts]
 
 pcbs:
   split:
