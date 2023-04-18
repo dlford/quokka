@@ -151,7 +151,7 @@ outlines:
         ref: matrix_inner_bottom
         shift: [32, -12.5]
   _pcb_outline: [_pcb_raw]
-  _3d_case_base:
+  _3d_case_base_raw:
     - what: outline
       name: _pcb_raw
       expand: 4
@@ -173,6 +173,30 @@ outlines:
       radius: 1.875
     thumb:
       radius: 1.875
+  _3d_case_holes_heat_set:
+    $extends: outlines._screw_holes
+    top_left:
+      radius: 1.55
+    bottom_left:
+      radius: 1.55
+    top_right:
+      radius: 1.55
+    palm:
+      radius: 1.55
+    thumb:
+      radius: 1.55
+  _3d_case_spacer_outer:
+    - what: circle
+      radius: 2.875
+      where:
+        ref: matrix_inner_bottom
+        shift: [-20, -20]
+  _3d_case_spacer_inner:
+    - what: circle
+      radius: 1.875
+      where:
+        ref: matrix_inner_bottom
+        shift: [-20, -20]
   _3d_case_pcb_risers_outer:
     $extends: outlines._screw_holes
     top_left:
@@ -217,12 +241,12 @@ outlines:
   switch_plate: [_plate_fillet, -_plate_oled_cover_cutout, -_switch_cutouts, -_screw_holes]
   oled_cover: [_oled_cover_plate, -_oled_screw_holes]
   bottom_plate: [_plate_fillet, -_screw_holes]
-  3d_case_base_upper: [_3d_case_base, -_screw_holes]
-  3d_case_base_lower: [_3d_case_base, -_screw_holes_counter_sunk]
-  3d_case_wall: [_3d_case_base, -_3d_case_wall_inner]
+  3d_case_base: [_3d_case_base_raw, -_3d_case_holes_heat_set]
+  3d_case_wall: [_3d_case_base_raw, -_3d_case_wall_inner]
   3d_case_plate_upper: [_plate_fillet, -_plate_oled_cover_cutout, -3d_case_switch_cutouts, -_screw_holes_counter_sunk]
   3d_case_plate_lower: [_plate_fillet, -_plate_oled_cover_cutout, -3d_case_switch_cutouts, -_screw_holes]
   3d_case_pcb_risers: [_3d_case_pcb_risers_outer, -_screw_holes]
+  3d_case_spacer: [_3d_case_spacer_outer, -_3d_case_spacer_inner]
 
 pcbs:
   split:
