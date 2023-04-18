@@ -187,28 +187,28 @@ outlines:
       radius: 1.55
   _3d_case_spacer_outer:
     - what: circle
-      radius: 2.875
+      radius: 2.125
       where:
         ref: matrix_inner_bottom
         shift: [-20, -20]
   _3d_case_spacer_inner:
     - what: circle
-      radius: 1.875
+      radius: 1.125
       where:
         ref: matrix_inner_bottom
         shift: [-20, -20]
   _3d_case_pcb_risers_outer:
     $extends: outlines._screw_holes
     top_left:
-      radius: 2.5
+      radius: 2.125
     bottom_left:
-      radius: 2.5
+      radius: 2.125
     top_right:
-      radius: 2.5
+      radius: 2.125
     palm:
-      radius: 2.5
+      radius: 2.125
     thumb:
-      radius: 2.5
+      radius: 2.125
   3d_case_keycaps:
     - what: rectangle
       where: true
@@ -216,20 +216,19 @@ outlines:
       bound: false
   3d_case_port_promicro:
     - what: rectangle
-      size: [33, 17.8]
+      size: [12, 60]
       where:
         - ref: matrix_inner_home
           shift: [1U, 16.5]
-          rotate: -90
   3d_case_port_trrs:
     - what: rectangle
-      size: [8.65, 12.1]
+      size: [8.65, 60]
       where:
         - ref: matrix_inner_home
           shift: [34.75, 32.5]
   3d_case_port_reset_switch:
     - what: rectangle
-      size: [3.5, 6]
+      size: [60, 20]
       where:
         - ref: matrix_inner_home
           shift: [36.5, -33.75]

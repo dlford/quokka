@@ -1,5 +1,6 @@
-$fa=2;
-$fs=0.1;
+$fa = $preview ? 1 : 0.01;
+$fs = $preview ? 0.1 : 0.01;
+$fn = $preview ? 32 : 64;
 
 spacer_height = 2;
 
