@@ -1,6 +1,12 @@
 $fa=1;
 $fs=0.1;
 
+/*
+To Do:
+- Port voids
+- Double check screw hole tolerances
+*/
+
 wall_height = 20.6;
 pcb_thickness = 1.6;
 pcb_gap_below = 2;
