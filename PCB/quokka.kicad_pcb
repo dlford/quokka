@@ -13856,16 +13856,40 @@
     (stroke (width 0.15) (type solid)) (layer "Edge.Cuts") (tstamp f1df72e2-0985-442b-94ed-a3fc42dcd92b))
   (gr_line (start 250.755321 195.039441) (end 263.627023 172.745)
     (stroke (width 0.15) (type solid)) (layer "Edge.Cuts") (tstamp f436f74a-396f-4721-a228-b1a51b7a7597))
-  (gr_text "-" (at 188.601906 152.65) (layer "B.SilkS") (tstamp 0d188893-dcc2-4939-96f2-b6038f999ce0)
-    (effects (font (size 1 1) (thickness 0.1)) (justify right bottom mirror))
+  (gr_text "OLED" (at 250.37 132.8 90) (layer "B.SilkS") (tstamp 1eece747-8189-42d8-bbe5-06d770e300d4)
+    (effects (font (size 0.75 0.75) (thickness 0.1)) (justify left bottom mirror))
   )
-  (gr_text "+" (at 196.911906 152.61) (layer "B.SilkS") (tstamp c2f93221-0c57-4c9d-b887-fe042fc408ad)
-    (effects (font (size 1 1) (thickness 0.1)) (justify right bottom mirror))
+  (gr_text "Piezo" (at 195.3 149.52) (layer "B.SilkS") (tstamp 48187971-46f9-4d17-be7f-6e36d38a3f9c)
+    (effects (font (size 1 1) (thickness 0.1)) (justify left bottom mirror))
   )
-  (gr_text "-" (at 188.64 152.67) (layer "F.SilkS") (tstamp 0c770167-6b7e-4502-bc2d-bc0fad648a33)
+  (gr_text "+" (at 255.21 132.32) (layer "B.SilkS") (tstamp 4a080188-33c6-407b-9206-0692b26ed5ce)
+    (effects (font (size 1 1) (thickness 0.1)) (justify left bottom mirror))
+  )
+  (gr_text "SDA" (at 260.75 132.33) (layer "B.SilkS") (tstamp 5ad0fcbb-449c-4a7f-bb14-e2ebbf1781cb)
+    (effects (font (size 0.75 0.75) (thickness 0.1)) (justify left bottom mirror))
+  )
+  (gr_text "-" (at 252.66 132.33) (layer "B.SilkS") (tstamp 998de86f-0f4d-4791-bdca-764eb123a480)
+    (effects (font (size 1 1) (thickness 0.1)) (justify left bottom mirror))
+  )
+  (gr_text "SCL" (at 258.12 132.33) (layer "B.SilkS") (tstamp 9c5dcd04-a2b9-4eb4-9dce-8ba9880e03d7)
+    (effects (font (size 0.75 0.75) (thickness 0.1)) (justify left bottom mirror))
+  )
+  (gr_text "+" (at 256.53 132.36) (layer "F.SilkS") (tstamp a8aefde4-f2bb-435f-9146-147887519793)
     (effects (font (size 1 1) (thickness 0.1)) (justify left bottom))
   )
-  (gr_text "+" (at 196.95 152.63) (layer "F.SilkS") (tstamp 4eddc501-2593-413b-ade7-666978875c48)
+  (gr_text "-" (at 259.08 132.37) (layer "F.SilkS") (tstamp bdf93041-2cb4-4244-9108-11fa0610dc5f)
+    (effects (font (size 1 1) (thickness 0.1)) (justify left bottom))
+  )
+  (gr_text "OLED" (at 250.37 135.58 90) (layer "F.SilkS") (tstamp c2866b73-78c8-4cd3-ae14-0161fd66943c)
+    (effects (font (size 0.75 0.75) (thickness 0.1)) (justify left bottom))
+  )
+  (gr_text "SDA" (at 250.99 132.37) (layer "F.SilkS") (tstamp e93c590c-902f-46cf-b735-7c6ac054f9ae)
+    (effects (font (size 0.75 0.75) (thickness 0.1)) (justify left bottom))
+  )
+  (gr_text "SCL" (at 253.62 132.37) (layer "F.SilkS") (tstamp f595e19c-8029-4eea-92f8-b5aa519725bc)
+    (effects (font (size 0.75 0.75) (thickness 0.1)) (justify left bottom))
+  )
+  (gr_text "Piezo" (at 191.31 149.52) (layer "F.SilkS") (tstamp fdbf3563-8cbf-41e5-8d42-28ba3aaff60f)
     (effects (font (size 1 1) (thickness 0.1)) (justify left bottom))
   )
 
@@ -49895,6 +49919,22 @@
     (members
       08cab1bb-1a1a-4d6c-858e-d0eb977436d4
       97bb0131-d752-4c49-9bf6-9aa8b594d5d4
+    )
+  )
+  (group "" (id 8b0dbf9d-e781-4c94-b9bb-c04cb12fadc0)
+    (members
+      4a080188-33c6-407b-9206-0692b26ed5ce
+      5ad0fcbb-449c-4a7f-bb14-e2ebbf1781cb
+      998de86f-0f4d-4791-bdca-764eb123a480
+      9c5dcd04-a2b9-4eb4-9dce-8ba9880e03d7
+    )
+  )
+  (group "" (id 3b3625af-029f-4529-8228-6094025b7233)
+    (members
+      a8aefde4-f2bb-435f-9146-147887519793
+      bdf93041-2cb4-4244-9108-11fa0610dc5f
+      e93c590c-902f-46cf-b735-7c6ac054f9ae
+      f595e19c-8029-4eea-92f8-b5aa519725bc
     )
   )
 )
