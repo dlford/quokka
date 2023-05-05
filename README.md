@@ -30,6 +30,7 @@
 - Screws and Stand-offs
     - M2x4mm screws for all standoffs
     - 10x M2x9mm screws for 3D printed case
+    - 10x [M2x3mm heat set inserts](https://www.mcmaster.com/97163A146/) for 3D printed case
     - 2x M2x10mm stand-offs for OLED mounting
     - 2x M2x15mm stand-offs for OLED covers
 
