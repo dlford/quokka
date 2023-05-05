@@ -2,20 +2,20 @@ $fa = $preview ? 1 : 0.01;
 $fs = $preview ? 0.1 : 0.01;
 $fn = $preview ? 32 : 64;
 
-keycap_bottom_height_from_plate = 7;
+keycap_bottom_height_from_plate = 7.75;
 pcb_thickness = 1.6;
 pcb_gap_below = 2;
-promicro_height = 6;
+promicro_height = 12;
 promicro_x_offset = 0;
 promicro_y_offset = 0;
-promicro_z_offset = 7;
-trrs_height = 10;
-trrs_x_offset = 0;
+promicro_z_offset = 5;
+trrs_height = 14;
+trrs_x_offset = -1.5;
 trrs_y_offset = 0;
-trrs_z_offset = 2.5;
-reset_switch_height = 16;
+trrs_z_offset = 0;
+reset_switch_height = 20;
 reset_switch_x_offset = 0;
-reset_switch_y_offset = 4.25;
+reset_switch_y_offset = 0.5;
 reset_switch_z_offset = 0;
 
 /* Hidden */
