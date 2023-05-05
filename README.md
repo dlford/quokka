@@ -15,6 +15,7 @@
 - Piezo speakers
 - 128x64 OLED displays
 - TRRS jack faces back to keep your cables out of the way
+- Full duplex serial connection between halves
 
 ## Parts List
 
@@ -22,7 +23,7 @@
 - 36x Kailh MX Hot Swap Sockets
 - 36x D_0805 1N4148 Diodes
 - 2x PJ-320A TRRS Jacks
-- 2x Pro Micro footprint MCU
+- 2x Adafruit KB2040 MCU
 - 8x Stick-on Rubber Feet
 - 2x PTS636 SP43 LFS Reset Buttons (Optional)
 - 36x SK6812-MINI-E RGB LEDs (Optional)
