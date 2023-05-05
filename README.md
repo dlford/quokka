@@ -21,7 +21,7 @@
 - 36x [Kailh MX Hot Swap Sockets](https://amzn.to/3pdbQfA)*
 - 36x [D_0805 1N4148 Diodes](https://amzn.to/3pfWarV)*
 - 2x [PJ-320A TRRS Jacks](https://amzn.to/3NHV4iI)*
-- 2x [Adafruit KB2040 MCU](https://amzn.to/414BkJn)*
+- 2x [Adafruit KB2040 MCU](https://www.adafruit.com/product/5302)
 - 8x [Stick-on Rubber Feet](https://amzn.to/3HISXHJ)*
 - 2x [PTS636 SP43 LFS Reset Buttons](https://www.digikey.com/en/products/detail/c-k/PTS636-SP43-LFS/10071717) (Optional)
 - 36x [SK6812-MINI-E RGB LEDs](https://www.diykeyboards.com/parts/product/sk6812-mini-e-rgb-led) (Optional)

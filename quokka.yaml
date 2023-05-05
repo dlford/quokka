@@ -263,9 +263,9 @@ outlines:
       where: true
       size: [14.3, 15.8]
       bound: false
-  switch_plate: [_plate_fillet, -_plate_oled_cover_cutout, -_switch_cutouts, -_screw_holes]
   oled_cover: [_oled_cover_plate, -_oled_screw_holes]
-  bottom_plate: [_plate_fillet, -_screw_holes]
+  switch_plate: [_plate_fillet, -_plate_oled_cover_cutout, -_switch_cutouts, -_screw_holes]
+  bottom_plate: [pcb_fillet, -_screw_holes]
   3d_case_base: [_3d_case_base_raw, -_3d_case_holes_heat_set]
   3d_case_wall: [_3d_case_base_raw, -_3d_case_wall_inner]
   3d_case_plate_upper: [_plate_fillet, -_plate_oled_cover_cutout, -3d_case_switch_cutouts, -_screw_holes_counter_sunk]
