@@ -27,6 +27,7 @@
 - 36x [SK6812-MINI-E RGB LEDs](https://www.diykeyboards.com/parts/product/sk6812-mini-e-rgb-led) (Optional)
 - 2x [GME12864-49 OLED Displays](https://www.littlekeyboards.com/products/128x64-oled-screen) (Optional)
 - 2x [KLJ-1102 Piezo Speakers](https://keeb.io/collections/diy-parts/products/piezo-speaker) (Optional)
+- [Pin header strip sockets](https://amzn.to/3VFhROo)* (Recommended, for hot swapping MCUs/OLEDs)
 - Screws and Stand-offs
     - M2x4mm screws for all standoffs
     - 10x M2x9mm screws for 3D printed case
