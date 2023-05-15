@@ -37,6 +37,6 @@
 
 ## Build Guide
 
-![Quokka Keyboard](img/build.png)
+![Quokka Keyboard](img/build.jpg)
 
 *Coming Soon!*
