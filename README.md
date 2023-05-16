@@ -156,44 +156,44 @@
 
     - No Case
 
-            The easiest option, just stick some rubber feet to the bottom of the PCBs and call it a day
+          The easiest option, just stick some rubber feet to the bottom of the PCBs and call it a day
 
-            ![Rubber feet on PCB](img/build/25.jpg)
+          ![Rubber feet on PCB](img/build/25.jpg)
 
-            ![No case keyboard finished](img/build/26.jpg)
+          ![No case keyboard finished](img/build/26.jpg)
 
     - 3D Printed Case
 
-            1. Print or order the parts
+          1. Print or order the parts
 
-            2. Install the heat set inserts into the bottom of the case body parts, careful not to push too deep as they will go right through the case.
+          2. Install the heat set inserts into the bottom of the case body parts, careful not to push too deep as they will go right through the case.
 
-            3. Sand and paint the case, if desired
+          3. Sand and paint the case, if desired
 
-            4. Place the PCB into the case body
+          4. Place the PCB into the case body
 
-            5. Place an M2x9mm screw into each of the holes in the plate, then push a spacer on the the screw from the bottom of the plate
+          5. Place an M2x9mm screw into each of the holes in the plate, then push a spacer on the the screw from the bottom of the plate
 
-            6. Place the plate over the PCB and tighten each screw
+          6. Place the plate over the PCB and tighten each screw
 
-            7. Install your switches
+          7. Install your switches
 
-            8. Stick some rubber feet on the bottom of the case
+          8. Stick some rubber feet on the bottom of the case
 
-            ![Quokka Keyboard](img/complete.jpg)
+          ![Quokka Keyboard](img/complete.jpg)
 
     - Plate Case
 
-            1. Install M2x10mm stand-offs on the bottom of the plates in the mounting holes
+          1. Install M2x10mm stand-offs on the bottom of the plates in the mounting holes
 
-            2. Install a switch into each corner of the plates
+          2. Install a switch into each corner of the plates
 
-            3. Install the PCB onto the switches in the plate
+          3. Install the PCB onto the switches in the plate
 
-            4. Install the remaining switches
+          4. Install the remaining switches
 
-            5. Install the bottom plate on the stand-offs
+          5. Install the bottom plate on the stand-offs
 
-            6. Stick some rubber feet on the bottom plate
+          6. Stick some rubber feet on the bottom plate
 
-            *Photo coming soon*
+          *Photo coming soon*
