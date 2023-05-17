@@ -32,9 +32,9 @@
   - M2x4mm screws for all standoffs
   - 10x M2x9mm screws for 3D printed case
   - 10x [M2x3mm heat set inserts](https://www.mcmaster.com/97163A146/) for 3D printed case
-  - 2x M2x10mm stand-offs for OLED mounting
-  - 2x M2x15mm stand-offs for OLED covers
-  - 10x M2x10mm stand-offs for plate cases (Note: You will need to carefull drill out the 5 mounting holes with a 1/8" drill bit so the stand-offs fit through them)
+  - 4x M2x10mm stand-offs for OLED mounting
+  - 4x M2x15mm stand-offs for OLED covers
+  - 10x M2x8mm round stand-offs for plate cases (Note: You will need to carefull drill out the 5 mounting holes with a 1/8" drill bit so the stand-offs fit through them, [these stand-offs](https://amzn.to/42FXkLX)\* fit in a 1/8" hole)
 
 ## Build Guide
 
@@ -184,7 +184,9 @@
 
     - Plate Case
 
-      1. Install M2x10mm stand-offs on the bottom of the plates in the mounting holes
+      _Note: If using the spacers, assemble without switches and install them last, using the bottom spacer with the wide end against the bottom plate, and the top spacer with the wide end against the PCB._
+
+      1. Install M2x8mm stand-offs on the bottom of the plates in the mounting holes
 
       2. Install a switch into each corner of the plates
 
