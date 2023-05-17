@@ -42,6 +42,8 @@
 
 ## Build Guide
 
+Download the necessary assets from the [releases](https://github.com/dlford/quokka/releases) page, you will find instructions on producing parts there as well.
+
 1.  Lay out two PCBs, make sure one is flipped, as if you were to type on the keyboard.
 
     \*Note: if you intend to use plates for the case, you will need to carefully drill out the 5 mounting holes on each PCB (marked in green) with a 1/8" drill bit so the stand-offs can fit through the holes (do not drill out the OLED or OLED cover mounting holes marked in red).
