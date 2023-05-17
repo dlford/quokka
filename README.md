@@ -28,19 +28,25 @@
 - 2x [GME12864-49 OLED Displays](https://www.littlekeyboards.com/products/128x64-oled-screen) (Optional)
 - 2x [KLJ-1102 Piezo Speakers](https://keeb.io/collections/diy-parts/products/piezo-speaker) (Optional)
 - [Pin header strip sockets](https://amzn.to/3VFhROo)\* (Recommended, for hot swapping MCUs/OLEDs)
-- Screws and Stand-offs
-  - M2x4mm screws for all standoffs
-  - 10x M2x9mm screws for 3D printed case
-  - 10x [M2x3mm heat set inserts](https://www.mcmaster.com/97163A146/) for 3D printed case
+  - Through hole resistors or diodes to sacrifice legs for pin header strip sockets (if using)
+- OLED hardware
+  - 16x M2x4mm screws
   - 4x M2x10mm stand-offs for OLED mounting
   - 4x M2x15mm stand-offs for OLED covers
-  - 10x M2x8mm round stand-offs for plate cases (Note: You will need to carefull drill out the 5 mounting holes with a 1/8" drill bit so the stand-offs fit through them, [these stand-offs](https://amzn.to/42FXkLX)\* fit in a 1/8" hole)
+- 3D Printed Case hardware
+  - 10x M2x9mm screws
+  - 10x [M2x3mm heat set inserts](https://www.mcmaster.com/97163A146/)
+- Plated Case hardware
+  - 20x M2x4mm screws
+  - 10x M2x8mm round stand-offs for plate cases ([these stand-offs](https://amzn.to/42FXkLX)\* fit in a 1/8" hole, don't forget a drill and 1/8" drill bit)
 
 ## Build Guide
 
 1.  Lay out two PCBs, make sure one is flipped, as if you were to type on the keyboard.
 
-    \*Note: if you intend to use plates for the case, you will need to carefully drill out the 5 mounting holes on each PCB with a 1/8" drill bit so the stand-offs can fit through the holes.
+    \*Note: if you intend to use plates for the case, you will need to carefully drill out the 5 mounting holes on each PCB (marked in green) with a 1/8" drill bit so the stand-offs can fit through the holes (do not drill out the OLED or OLED cover mounting holes marked in red).
+
+    ![PCB mounting holes to drill out for plated case](img/build/3a.jpg)
 
 2.  Tin SMD Pads
 
@@ -182,9 +188,9 @@
 
       ![Quokka Keyboard](img/complete.jpg)
 
-    - Plate Case
+    - Plated Case
 
-      _Note: If using the spacers, assemble without switches and install them last, using the bottom spacer with the wide end against the bottom plate, and the top spacer with the wide end against the PCB._
+      _Note: If using the 3D printed plate spacers, assemble without switches and install them last, using the bottom spacer with the wide end against the bottom plate, and the top spacer with the wide end against the PCB._
 
       1. Install M2x8mm stand-offs on the bottom of the plates in the mounting holes
 
@@ -198,4 +204,6 @@
 
       6. Stick some rubber feet on the bottom plate
 
-      _Photo coming soon_
+      Shown here using Aluminum plates from [Ponoko](https://ponoko.com), though I would recommend using FR4 plates, or deburred and anodized aluminum plates from [sendcutsend.com](https://sendcutsend.com) for less money
+
+      ![Plate stack build](img/plated.jpg)
