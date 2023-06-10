@@ -1,11 +1,19 @@
 module.exports = {
-    params: {},
+    params: {
+      designator: 'H', // hardware https://klc.kicad.org/symbol/s6/s6.1/
+    },
     body: p => `
         (module M2_Screw_fhole (layer F.Cu) (tedit 5E1ADAC2)
         ${p.at /* parametric position */} 
           (descr "Mounting Hole 2.2mm, M2, ISO7380")
           (tags "mounting hole 2.2mm m2 iso7380")
           (attr exclude_from_pos_files exclude_from_bom)
+          (fp_text reference "${p.ref}" (at 0 0) (layer "F.SilkS") hide
+              (effects (font (size 1.27 1.27) (thickness 0.15)))
+          )
+          (fp_text value "M2_Screw_fhole" (at 0 0) (layer "F.SilkS") hide
+              (effects (font (size 1.27 1.27) (thickness 0.15)))
+          )
           (fp_circle (center 0 0) (end 1.75 0)
             (stroke (width 0.15) (type solid)) (fill none) (layer "Cmts.User") (tstamp d1e3209a-3978-41af-9c4a-60df54b55082))
           (fp_circle (center 0 0) (end 2 0)

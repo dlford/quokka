@@ -6,6 +6,7 @@
 
 module.exports = {
   params: {
+    designator: 'LS', // buzzer https://klc.kicad.org/symbol/s6/s6.1/
     A: undefined,
     B: undefined,
   },
@@ -15,6 +16,12 @@ module.exports = {
 
     ${'' /* footprint */}
     (attr smd)
+      (fp_text reference "${p.ref}" (at 0 0) (layer "F.SilkS") hide
+          (effects (font (size 1.27 1.27) (thickness 0.15)))
+      )
+      (fp_text value "KLJ-1102_Piezo" (at 0 0) (layer "F.SilkS") hide
+          (effects (font (size 1.27 1.27) (thickness 0.15)))
+      )
       (fp_rect (start 11 0) (end 0 9)
         (stroke (width 0.1) (type default)) (fill none) (layer "B.SilkS") (tstamp 01c2fabf-b739-44a2-b13f-b473c1618c70))
       (fp_rect (start 0 0) (end 11 9)

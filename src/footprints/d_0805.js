@@ -12,6 +12,12 @@ module.exports = {
           (descr "Diode SMD in 0805 package http://datasheets.avx.com/schottky.pdf")
           (tags "smd diode")
           (attr smd)
+          (fp_text reference "${p.ref}" (at 0 0 75) (layer "F.SilkS") hide
+              (effects (font (size 1.27 1.27) (thickness 0.15)))
+          )
+          (fp_text value "D_0805" (at 0 0 75) (layer "F.SilkS") hide
+              (effects (font (size 1.27 1.27) (thickness 0.15)))
+          )
           (fp_line (start -1.61 -0.8) (end 0.99 -0.8)
             (stroke (width 0.12) (type solid)) (layer "B.SilkS") (tstamp 5e04b147-c494-4dec-b4bf-9d0db2c5bf89))
           (fp_line (start -1.61 0.8) (end -1.61 -0.8)
