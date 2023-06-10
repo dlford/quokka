@@ -13,7 +13,7 @@ module.exports = {
 
             ${'' /* footprint reference */}
             (attr through_hole)
-            (fp_text reference "REF**" (at 0 2.1 unlocked) (layer "F.SilkS") hide
+            (fp_text reference "${p.ref}" (at 0 2.1 unlocked) (layer "F.SilkS") hide
                 (effects (font (size 0.7 0.7) (thickness 0.15)))
               (tstamp 7dbb6894-26c5-419f-bb83-1ec89fe74f18)
             )
