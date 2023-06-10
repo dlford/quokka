@@ -23,11 +23,9 @@ module.exports = {
       (attr through_hole)
       (fp_text reference "${p.ref}" (at 0 0 180) (layer "F.SilkS") hide
           (effects (font (size 1.27 1.27) (thickness 0.15)))
-        (tstamp 7d14f8bb-8b91-4c43-9a14-25aa9a4c025b)
       )
       (fp_text value "GME12864-49_OLED" (at 0 0 180) (layer "F.SilkS") hide
           (effects (font (size 1.27 1.27) (thickness 0.15)))
-        (tstamp d10d328f-dd27-441b-93e1-860d1c30efab)
       )
       (fp_rect (start 0 0) (end 24.7 27)
         (stroke (width 0.1) (type default)) (fill none) (layer "F.SilkS") (tstamp e95fafcf-9e7a-48a3-b105-f26e0ba3f32b))

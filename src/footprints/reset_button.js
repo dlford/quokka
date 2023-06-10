@@ -11,7 +11,6 @@ module.exports = {
       (attr through_hole)
       (fp_text reference "${p.ref}" (at 0 0 90) (layer "F.SilkS") hide
           (effects (font (size 1.27 1.27) (thickness 0.15)))
-        (tstamp 15f8b1ea-a071-4977-ace1-cb902f099e15)
       )
       (fp_rect (start -3 -1.75) (end 3 1.75)
         (stroke (width 0.1) (type default)) (fill none) (layer "F.SilkS") (tstamp f1aa01b3-2926-4391-8681-066d00797866))

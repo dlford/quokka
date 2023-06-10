@@ -15,11 +15,9 @@ module.exports = {
             (attr through_hole)
             (fp_text reference "${p.ref}" (at 0 2.1 unlocked) (layer "F.SilkS") hide
                 (effects (font (size 0.7 0.7) (thickness 0.15)))
-              (tstamp 7dbb6894-26c5-419f-bb83-1ec89fe74f18)
             )
             (fp_text value "SK6812-MINI-E" (at 0 -0.5 unlocked) (layer "F.SilkS") hide
                 (effects (font (size 1 1) (thickness 0.15)))
-              (tstamp 1903831e-a26c-448f-92c8-e5058fb47cc4)
             )
             (fp_poly
               (pts

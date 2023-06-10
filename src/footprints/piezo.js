@@ -18,11 +18,9 @@ module.exports = {
     (attr smd)
       (fp_text reference "${p.ref}" (at 0 0) (layer "F.SilkS") hide
           (effects (font (size 1.27 1.27) (thickness 0.15)))
-        (tstamp 026d94e2-00f4-4e4d-95c8-d572dccda0bc)
       )
       (fp_text value "KLJ-1102_Piezo" (at 0 0) (layer "F.SilkS") hide
           (effects (font (size 1.27 1.27) (thickness 0.15)))
-       (tstamp ed401671-7577-4ab7-a92b-4da9d3ee9093)
       )
       (fp_rect (start 11 0) (end 0 9)
         (stroke (width 0.1) (type default)) (fill none) (layer "B.SilkS") (tstamp 01c2fabf-b739-44a2-b13f-b473c1618c70))

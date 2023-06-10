@@ -10,11 +10,9 @@ module.exports = {
           (attr exclude_from_pos_files exclude_from_bom)
           (fp_text reference "${p.ref}" (at 0 0) (layer "F.SilkS") hide
               (effects (font (size 1.27 1.27) (thickness 0.15)))
-            (tstamp 5f75ec32-d4a0-4af7-b747-7c85efe1cf5f)
           )
           (fp_text value "M2_Screw_fhole" (at 0 0) (layer "F.SilkS") hide
               (effects (font (size 1.27 1.27) (thickness 0.15)))
-            (tstamp fc61a7b5-d445-45b1-a24b-9163477d1b0a)
           )
           (fp_circle (center 0 0) (end 1.75 0)
             (stroke (width 0.15) (type solid)) (fill none) (layer "Cmts.User") (tstamp d1e3209a-3978-41af-9c4a-60df54b55082))
